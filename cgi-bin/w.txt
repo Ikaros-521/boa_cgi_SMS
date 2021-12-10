@@ -1,0 +1,1 @@
+root     pts/1    47.115.163.167   17Apr20 45days  0.01s  0.01s -bash

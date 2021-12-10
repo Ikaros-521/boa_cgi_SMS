@@ -1,0 +1,54 @@
+@import url(https://fonts.googleapis.com/css?family=Concert+One);
+
+h10 {
+  animation:glow 10s ease-in-out infinite;
+  
+  
+
+/* For less laggy effect, uncomment this:
+  
+  animation:none;
+  -webkit-text-stroke:1px #fff; 
+  
+=========== */
+  
+}
+
+
+
+* { box-sizing:border-box; }
+
+
+figure {
+  animation:wobble 5s ease-in-out infinite;
+  transform-origin:center center;
+  transform-style:preserve-3d;
+}
+
+@keyframes wobble {
+  0%,100%{ transform:rotate3d(1,1,0,20deg); }
+  25%{ transform:rotate3d(-1,1,0,20deg); }
+  50%{ transform:rotate3d(-1,-1,0,20deg); }
+  75%{ transform:rotate3d(1,-1,0,20deg); }
+}
+h10 {
+  display:block;
+  width:100%;
+  padding:4px;
+  line-height:1.5;
+  font:200 2em 'Concert One', sans-serif;
+  text-transform:uppercase;
+  position:absolute;
+  color:#0a0a0a;
+}
+
+@keyframes glow {
+  0%,100%{ text-shadow:0 0 30px red; }
+  25%{ text-shadow:0 0 30px orange; }
+  50%{ text-shadow:0 0 30px forestgreen; }
+  75%{ text-shadow:0 0 30px cyan; }
+}
+
+h10:nth-child(2){ transform:translateZ(5px); }
+h10:nth-child(3){ transform:translateZ(10px);}
+h10:nth-child(4){ transform:translateZ(15px); }

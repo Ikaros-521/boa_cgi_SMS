@@ -1,0 +1,45 @@
+<html>
+<head>
+<script type="text/javascript">
+
+function get_info()
+{
+	var xmlhttp;
+	if(window.XMLHttpRequest)
+  	{
+  		//code for IE7+,Firefox,Chrome,Opera,Safari
+  		xmlhttp=new XMLHttpRequest();
+  	}
+	else
+  	{
+  		//code for IE6,IE5
+  		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  	}
+	xmlhttp.onreadystatechange=function()
+  	{
+  		if(xmlhttp.readyState==4 && xmlhttp.status==200)
+    	{
+    		document.getElementById("txtIDA").innerHTML=xmlhttp.responseText;
+        document.getElementById("txtIDB").innerHTML=xmlhttp.responseText;
+    	}
+  	}
+    // 遇到的问题是一次性接收，导致无法给对应的span赋值
+	xmlhttp.open("GET","cgi-bin/ajax2.cgi?get_info",true);
+	xmlhttp.send();
+}
+
+</script>
+</head>
+<body>
+
+<h3>演示了网页如何把数据通过AJAX发给后台CGI:</h3>
+<h3>和后台CGI如何把数据返回到网页的指定控件显示:</h3>
+<form action=""> 
+姓氏:<input type="text" id="txt1" />
+年龄:<input type="text" id="txt2" />
+</form>
+<input type="submit" value="get_info" onclick="get_info()" />
+<p>建议:<span id="txtIDA"></span></p> 
+<p>说明:<span id="txtIDB"></span></p> 
+</body>
+</html>

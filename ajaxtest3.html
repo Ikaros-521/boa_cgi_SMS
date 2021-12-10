@@ -1,0 +1,64 @@
+<html>
+<head>
+
+<script type="text/javascript">
+
+function get_json(json,formId) {
+    alert("进入get_json函数");
+    var name1 = "A";
+    var name2 = "B";
+    if(json[name1]){
+        var value = json[name1];
+                // 直接给id为name1的控件赋值
+        document.getElementById(name1).innerHTML = value;
+         }
+    if(json[name2]){
+        var value = json[name2];
+        document.getElementById(name2).innerHTML = value;
+        }
+    alert("get_json运行完毕");
+};
+
+function get_info()
+{
+    var xmlhttp;
+    if(window.XMLHttpRequest)
+        {
+  	    //code for IE7+,Firefox,Chrome,Opera,Safari
+  	    xmlhttp=new XMLHttpRequest();
+        }
+    else
+  	    {
+  	    //code for IE6,IE5
+  	    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  	    }
+    xmlhttp.onreadystatechange=function()
+  	    {
+  	    if(xmlhttp.readyState==4 && xmlhttp.status==200)
+    	        {
+                        //将接收到的字符串存入jsonstr
+            var jsonstr = xmlhttp.responseText;
+            alert("json:"+jsonstr);
+                        // 将jsonstr转换为json对象 json
+            var json = JSON.parse(jsonstr);
+            alert(json["A"]);
+            var formid = "form1";
+            alert("调用get_json,传参json对象和form的id");
+            get_json(json,formid);
+    	        }
+  	    }
+    xmlhttp.open("GET","cgi-bin/ajax3.cgi?get_info",true);
+    xmlhttp.send();
+}
+
+</script>
+</head>
+<body>
+<h3>后台CGI如何把数据返回到网页的指定控件显示:</h3>
+<input type="submit" value="get_info" onclick="get_info()" />
+<form id="form1">
+    <p>建议:<span id="A" ></span></p> 
+    <p>说明:<span id="B" ></span></p>
+</form> 
+</body>
+</html>

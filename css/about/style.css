@@ -1,0 +1,30 @@
+body {
+    background-color: #2c343c;
+    color: antiquewhite;
+}
+
+#center {
+	width: 100%;
+}
+
+#center_div1 {
+    width: 60%;
+    padding-top: 2%;
+	left: 20%;
+	/* height: auto; */
+	position: relative;
+}
+
+#center_div1 span {
+    font-size: 20px;
+}
+
+#center_div1 a {
+    font-size: 20px;
+    margin: 10px;
+}
+
+#center_div1 img {
+    width: 30%;
+    margin: 20px;
+}

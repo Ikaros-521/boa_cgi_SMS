@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>日志查看</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="css/datepicker.css">
+	<script src="js/jquery-2.2.3.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<link type="text/css" href="css/jquery-ui.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+	<link rel="icon" href="img/logo.png" type="image/gif">
+	
+	<link href="css/system_log/style.css" rel="stylesheet">
+</head>
+<body>
+	<div id="center">
+		<div id="center_div3">
+			<div class="mt40">
+				<span id="span_operation_time">操作时间: </span>
+				<div class="c-datepicker-date-editor  J-datepicker-range-day mt10">
+					<i class="c-datepicker-range__icon kxiconfont icon-clock"></i>
+					<input placeholder="" name="" class="c-datepicker-data-input only-date" value="" id="data_start">
+					<span class="c-datepicker-range-separator">至</span>
+					<input placeholder="" name="" class="c-datepicker-data-input only-date" value="" id="data_end">
+				</div>
+				<input id="query" type="button" value="查询"  onclick="query_info();">
+				<input id="reset" type="button" value="重置"  onclick="reset();"/>
+			</div>
+
+		</div>
+		<div id="center_div1">
+		  <form>
+				<table border="1" class="table table-bordered" id="table1"> 
+				  <thead>
+							<tr id="list"> 
+								<th class="table_th">操作时间</th> 
+								<th class="table_th">操作类型</th> 
+								<th class="table_th">操作描述</th> 
+							</tr> 
+					</thead>
+					<tbody id="listbody"></tbody>
+				</table> 
+			</form>
+		</div>
+		<div id="center_div2">
+			<div id="barcon" class="barcon" >
+				<div id="barcon2" class="barcon2">
+					<ul>
+						<li>
+							<span id="total_tr"></span>
+							<input id="paging" type="text" value="" readonly="true"/>
+							<span id="total_page"></span>
+						</li>
+						<li><a href="###" id="firstPage">&lt;&lt;</a></li>
+						<li><a href="###" id="prePage">&lt;</a></li>
+						<li><a href="###" id="nextPage">&gt;</a></li>
+						<li><a href="###" id="lastPage">&gt;&gt;</a></li>
+						<!--
+						<li>
+							<select id="jumpWhere">
+							</select>
+						</li>
+						<li><a href="###" id="jumpPage" onclick="jumpPage()">跳转</a></li>
+						-->
+						<li>
+							<span>前往</span>
+							<input id="input_page" type="text" value="" autocomplete="off"/>
+							<span>页</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="js/moment.min.js"></script>
+<script src="js/datepicker.all.js"></script>
+<script src="js/datepicker.en.js"></script>
+<script src="js/system_log.js"></script>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>用户管理</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="js/jquery-2.2.3.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<link type="text/css" href="css/jquery-ui.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+	<link rel="icon" href="img/logo.png" type="image/gif">
+	
+	<link href="css/user_management/style.css" rel="stylesheet">
+</head>
+<body>
+	<div id="center">
+		<div id="center_div1">
+			<div class="center_title">
+				修改用户名
+			</div>
+			<div class="center_div_body">
+				<form id="form1" enctype="multipart/form-data" action="cgi-bin/change_username.cgi" method="post" class="form-horizontal" role="form">
+					<table  class="table1">
+						<tr>
+							<td>
+								<div  >
+									<label class="col-sm-2 control-label">
+										<h5>
+											<span> 当前用户名</span>
+										</h5>
+									</label>					 
+									<input class="input_common" id="cur_username"  name="cur_username"  type="text" value="" disabled="disabled" autocomplete="off"/>					
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div  >
+									<label class="col-sm-2 control-label">
+										<h5>
+											<span> 新用户名</span>
+										</h5>
+									</label>	
+									<input class="input_common" id="new_username"  name="new_username"  type="text" value="" autocomplete="off" oninput="check_empty_username()" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')"/>		
+									</br>
+									<span id="username_tip" class="tip_common">请填写新用户名</span>			
+								</div>
+							</td>
+						</tr>
+					</table>
+					<div class="btn_gruop">
+						<input class="save" type="button" value="保存"  onclick="check_username()" />
+						<input class="cancel" type="button" onclick="clean_user()" value="取消" />
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="center_div2">
+			<div class="center_title">
+				修改密码
+			</div>
+			<div class="center_div_body">
+				<form enctype="multipart/form-data"  method="post" class="form-horizontal" role="form" id="form2" action="cgi-bin/change_password.cgi" >
+					<table  class="table1">
+						<tr>
+							<td>
+								<div  >
+									<label class="col-sm-2 control-label">
+										<h5>
+											<span> 当前密码</span>
+										</h5>
+									</label>		 
+									<input class="input_common" id="cur_password"  name="cur_password" id="cur_password" type="password" value="" autocomplete="off" oninput="check_empty_cur_password()" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')"/>
+									</br>
+									<span id="cur_password_tip" class="tip_common">请填写当前密码</span>		
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div  >
+									<label class="col-sm-2 control-label">
+										<h5>
+											<span> 新密码</span>
+										</h5>
+									</label>	
+									<input class="input_common" id="new_password"  name="new_password" id="new_password" type="password" value="" autocomplete="off" oninput="check_empty_new_password()" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')"/>
+									</br>
+									<span id="new_password_tip" class="tip_common">请填写新密码</span>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div  >
+									<label class="col-sm-2 control-label">
+										<h5>
+											<span> 确认新密码</span>
+										</h5>
+									</label>		 
+									<input class="input_common" id="new_password2"  name="new_password2" id="new_password2" type="password" value="" autocomplete="off" oninput="check_empty_new_password2()" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')"/>
+									</br>
+									<span id="new_password2_tip" class="tip_common">请填写确认新密码</span>
+								</div>
+							</td>
+						</tr>
+					</table>
+					<div  class="btn_gruop">
+						<input class="save" type="button" value="保存"  onclick="check_password()" />
+						<input class="cancel" type="button" onclick="clean_pass()" value="取消" />
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="js/user_management.js"></script>
+</html>

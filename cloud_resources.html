@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>云端资源</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="js/jquery-2.2.3.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<link type="text/css" href="css/jquery-ui.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+	<link rel="icon" href="img/logo.png" type="image/gif">
+	
+	<link href="css/cloud_resources/style.css" rel="stylesheet">
+</head>
+<body>
+	<div id="center">
+		<div id="center_div1">
+			<div id="upload_div">
+				<input type="file" class="btn btn-primary" name="file" id="file" onchange="fileSelected();">
+				<button id="btn_upload" type="button" class="btn btn-primary" onclick="uploadFile();">上传文件</button>
+				<span id="progressNumber"></span>
+			</div id="search_div">
+			<div>
+				<input class="form-control" id="search_filename" type="text" placeholder="请输入文件名">
+				<button id="btn_search" type="button" class="btn btn-primary" onclick="search_file();">搜索</button>
+			</div>
+		</div>
+		<div id="center_div2">
+			<div id="form_div">
+				<form id="form1" enctype="multipart/form-data" action="cgi-bin/route.cgi" method="post" class="form-horizontal" role="form">
+					<table class="table table-striped" id="table1">
+						<thead>
+						<tr id="list"> 
+							<th class="table_th">文件名</th> 
+							<th class="table_th">下载</th> 
+							<th class="table_th">删除</th> 
+						</tr> 
+						</thead>
+						<tbody id="listbody"></tbody>
+					</table>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="js/cloud_resources.js"></script>
+</html>

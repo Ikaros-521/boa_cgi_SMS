@@ -1,0 +1,45 @@
+html,body {
+	width:100%;
+	height:100%
+}
+ 
+body {
+	background:url("../../img/login_bg.jpg");
+	background-size: 100%;
+}
+
+#center {
+	width: 100%;
+    height: 30%;
+    top: 50%;
+    text-align: center;
+    position: absolute;
+}
+
+#center #center_form {
+	width: 20%;
+    left: 40%;
+    position: relative;
+	min-width: 120px;
+}
+
+#center #tip_username {
+	color: #FF6158;
+	margin-top: 10px;
+}
+
+#center #tip_password {
+	color: #FF6158;
+	margin-top: 10px;
+}
+
+#btn #login_btn {
+    width: 20%;
+}
+
+#bottom {
+	position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}

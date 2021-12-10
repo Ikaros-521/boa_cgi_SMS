@@ -1,0 +1,78 @@
+<html>
+<head>
+<script type="text/javascript">
+
+function FuncA(str)
+{
+	var xmlhttp;
+	if(str.length==0)
+  	{ 
+  		document.getElementById("txtIDA").innerHTML="";
+  		return;
+  	}
+	if(window.XMLHttpRequest)
+  	{
+  		//code for IE7+,Firefox,Chrome,Opera,Safari
+  		xmlhttp=new XMLHttpRequest();
+  	}
+	else
+  	{
+  		//code for IE6,IE5
+  		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  	}
+	xmlhttp.onreadystatechange=function()
+  	{
+  		if(xmlhttp.readyState==4 && xmlhttp.status==200)
+    	{
+    		document.getElementById("txtIDA").innerHTML=xmlhttp.responseText;
+    	}
+  	}
+	xmlhttp.open("GET","cgi-bin/ajax1.cgi?txtIDA="+str,true);
+	xmlhttp.send();
+}
+
+function FuncB(str)
+{
+	var xmlhttp;
+	if(str.length==0)
+  	{ 
+  		document.getElementById("txtIDB").innerHTML="";
+  		return;
+  	}
+	if(window.XMLHttpRequest)
+  	{
+  		//code for IE7+,Firefox,Chrome,Opera,Safari
+  		xmlhttp=new XMLHttpRequest();
+  	}
+	else
+  	{
+  		//code for IE6,IE5
+  		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  	}
+	xmlhttp.onreadystatechange=function()
+  	{
+  		if(xmlhttp.readyState==4 && xmlhttp.status==200)
+    	{
+    		document.getElementById("txtIDB").innerHTML=xmlhttp.responseText;
+    	}
+  	}
+	xmlhttp.open("GET","cgi-bin/ajax1.cgi?txtIDB="+str,true);
+	xmlhttp.send();
+}
+
+</script>
+</head>
+<body>
+
+<h3>演示了网页如何把数据通过AJAX发给后台CGI:</h3>
+<h3>和后台CGI如何把数据返回到网页的指定控件显示:</h3>
+<h3>键盘停止输入就会调用函数，这是网上的原版代码</h3>
+<form action=""> 
+姓氏:<input type="text" id="txt1" onkeyup="FuncA(this.value)" />
+年龄:<input type="text" id="txt2" onkeyup="FuncB(this.value)" />
+</form>
+<p>建议:<span id="txtIDA"></span></p> 
+<p>说明:<span id="txtIDB"></span></p> 
+
+</body>
+</html>

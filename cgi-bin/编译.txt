@@ -1,0 +1,6 @@
+此目录执行 make
+
+针对ajax相关：
+gcc ajax1.c -o ajax1.cgi
+gcc ajax2.c cgic.c -o ajax2.cgi
+gcc ajax3.c cgic.c -o ajax3.cgi

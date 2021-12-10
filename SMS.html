@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SMS</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="js/jquery-2.2.3.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<link type="text/css" href="css/jquery-ui.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+	<link rel="icon" href="img/logo.png" type="image/gif">
+	
+	<link href="css/SMS/style.css" rel="stylesheet">
+</head>
+<body>
+	<div id="head">
+		<div class="top">
+		    <center> 
+				<ul>
+					<li><span id="link1">首页</span></li>
+					<li><span id="link2">系统状态</span></li>
+					<li>
+						<span href="#">应用管理</span>
+						<ul>
+							<li><span id="link5">MySQL</span></li>
+							<li><span id="link9">Apache</span></li>
+							<li><span id="link10">Squid</span></li>
+							<li><span id="link12">GateOne</span></li>
+							<li><span id="link14">Frp</span></li>
+						</ul>
+					</li>
+					<li><span id="link8">云端资源</span></li>
+					<li>
+						<span href="#">安全设置</span>
+						<ul>
+							<li><span id="link11">禁PING</span></li>
+						</ul>
+					</li>
+					<li>
+						<span href="#">系统日志</span>
+						<ul>
+							<li><span id="link3">日志查看</span></li>
+							<li><span id="link13">日志管理</span></li>
+						</ul>
+					</li>
+					<li><span id="link4">用户管理</span></li>
+					<li><span id="link15">关于我们</span></li>
+					<li><span id="link7"><b>退出系统</b></span></li>
+				 </ul>
+			 </center>      
+		</div>
+	</div>
+	<div id="center">
+		<div style="width: 100%;height: 100%;">
+			<iframe id="iframe1" data-label="内部框架" scrolling="auto" frameborder="0" src="system_state.html"></iframe>
+		</div>
+	</div>
+	<div id="bottom">
+		<div class="footer">
+			<span>Copyright © </span><a title="www.baidu.com"><span>Ikaros</span></a><span>, All Rights Reserved.</span>
+			<span>备案号：<a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow"><span>某ICP备00000000号</span></a></span>
+		</div>
+	</div>
+</body>
+<script src="js/SMS.js"></script>
+</html>

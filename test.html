@@ -1,0 +1,51 @@
+<html>
+<head>
+	<title>SMS登录页面</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <link type="text/css" href="css/jquery-ui.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+	<link rel="icon" href="img/logo.png" type="image/gif">
+	
+	<link type="text/css" href="css/login/style.css" rel="stylesheet">
+</head>
+<body>
+
+	<div id="head">
+		
+	</div>
+	<div id="center">
+		<div id="center_form">
+			<form name="myform" class="bs-example bs-example-form" role="form" enctype="multipart/form-data" action="cgi-bin/test.cgi"  method="post">
+				<div class="input-group input-group-lg">
+					<input name="username" id="username" type="text" class="form-control" placeholder="请输入用户名" onblur="check_username();" 
+					onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" onkeydown='if(event.keyCode==13){login();}' />
+					</br>
+					<span id="tip_username"></span>
+				</div>
+				<br>
+				<div class="input-group input-group-lg">
+					<input name="password" id="password" type="password" class="form-control" placeholder="请输入密码"  onblur="check_password();" 
+					onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" onkeydown='if(event.keyCode==13){login();}' />
+					</br>
+					<span id="tip_password"></span>
+				</div>
+				<br>
+			</form>
+		</div>
+		<div id="btn">
+			<button id="login_btn" type="button" class="btn btn-primary" onclick="login();">登录</button>
+		</div>
+	</div>
+	<div id="bottom">
+		<div class="footer">
+			<span>Copyright © </span><a title="www.baidu.com"><span>Ikaros</span></a><span>, All Rights Reserved.</span>
+			<span>备案号：<a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow"><span>某ICP备00000000号</span></a></span>
+		</div>
+	</div>
+</body>
+ <script src="js/test.js"></script>
+</html>

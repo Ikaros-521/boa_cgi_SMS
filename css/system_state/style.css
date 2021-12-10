@@ -1,0 +1,20 @@
+body {
+	background-color: #2c343c;
+}
+
+#center {
+	width: 100%;
+}
+
+#center_div1 {
+	padding: 5%;
+	width: 60%;
+	text-align: center;
+	left: 20%;
+	/* height: auto; */
+	position: relative;
+}
+
+#center #center_div1 .table {
+	color: aliceblue;
+}

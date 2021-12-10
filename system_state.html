@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>系统状态</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="js/jquery-2.2.3.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<link type="text/css" href="css/jquery-ui.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+	<link rel="icon" href="img/logo.png" type="image/gif">
+	
+	<link href="css/system_state/style.css" rel="stylesheet">
+	<script type="text/javascript" src="js/echarts.min.js"></script>
+</head>
+<body>
+	<div id="center">
+		<div id="center_div1">
+			<table class="table">
+				<tbody>
+					<tr>
+						<td>操作系统</td>
+						<td>CentOS7</td>
+						<td>软件版本</td>
+						<td>0.0.1</td>
+					</tr>
+					<tr>
+						<td>公网IP</td>
+						<td>47.115.163.167</td>
+						<td>私网IP</td>
+						<td id="private_ip">x.x.x.x</td>
+					</tr>
+					<tr>
+						<td>CPU</td>
+						<td>Intel Xeon E5-2682 v4</td>
+						<td>内存</td>
+						<td>4G DDR4</td>
+					</tr>
+					<tr>
+						<td>带宽</td>
+						<td>1M VPC专有网络, I/O 优化</td>
+						<td>硬盘</td>
+						<td>40G</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div id="center_div2">
+			<div id="container_cpu" style="height: 300px; width: 33.4%;float: left;"></div>
+			<div id="container_memory" style="height: 300px; width: 33.3%;float: right;"></div>
+			<div id="container_disk" style="height: 300px; width: 33.3%;float: right;"></div>
+		</div>
+	</div>
+</body>
+<script src="js/system_state.js"></script>
+</html>

@@ -1,0 +1,66 @@
+body {
+    background-color: #2c343c;
+    color: antiquewhite;
+}
+
+#center {
+	width: 100%;
+}
+
+#center_div1 {
+	text-align: center;
+}
+
+/* 选择文件 */
+#file {
+	cursor: pointer;
+}
+
+#upload_div {
+	padding: 10px;
+}
+
+#search_div {
+	padding: 5px;
+}
+
+#center_div2 {
+	text-align: center;
+}
+
+/* 文件名输入框 span */
+#search_filename {
+	width: 325px;
+	border-radius: 3px;
+	display: inline
+}
+
+/* 搜索按钮 */
+#btn_search {
+	margin-bottom: 5px;
+}
+
+#center_div2 #form_div {
+	width: 50%;
+	margin-left: 25%;
+}
+
+.table {
+	color: antiquewhite;
+}
+
+.table td, .table th {
+	padding: 0px;
+	letter-spacing: 0.8px;
+	vertical-align: baseline;
+}
+
+.table .table_th {
+	vertical-align: inherit;
+	height: 40px;
+}
+
+img {
+	width: 40px;
+	cursor: pointer;
+}

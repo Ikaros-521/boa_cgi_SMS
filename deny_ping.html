@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>禁PING</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="js/jquery-2.2.3.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<link type="text/css" href="css/jquery-ui.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+	<link rel="icon" href="img/logo.png" type="image/gif">
+	
+	<link href="css/deny_ping/style.css" rel="stylesheet">
+</head>
+<body>
+	<div id="center">
+		<div id="center_div1">
+            <h1>禁PING</h1>
+            <br>
+            <span>
+				说明：执行 echo 1 >/proc/sys/net/ipv4/icmp_echo_ignore_all （0表示允许，1表示禁止）
+			</span>
+			<br>
+			<span>
+				以上临时禁止ping，如需永久禁止，可以在 /etc/sysctl.conf
+			</span>
+			<br>
+			<span>
+				中增加一行 net.ipv4.icmp_echo_ignore_all=1（0表示允许，1表示禁止）。
+			</span>
+            <br>
+            <button id="start_btn" type="button" class="btn btn-primary" onclick="set_deny_ping('start');">开启禁PING</button>
+            <button id="stop_btn" type="button" class="btn btn-primary" onclick="set_deny_ping('stop');">关闭禁PING</button>
+		</div>
+	</div>
+</body>
+<script src="js/deny_ping.js"></script>
+</html>

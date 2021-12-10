@@ -1,0 +1,65 @@
+/**
+ * These styles are only here to make the demo page prettier,
+ * not used by zoom.js itself.
+ */
+
+html, body {
+	font-family: 'Lato', Times, 'Times New Roman', serif;
+	font-size: 16px;
+	color: #eee;
+}
+
+html {
+	background: #323232;
+}
+
+body {
+	margin: 0;
+}
+
+
+a {
+	color: cyan;
+}
+
+em {
+	font-style: italic;
+}
+
+.page-header,
+.page-body {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 40px;
+}
+
+.page-header {
+	background: rgba(0, 0, 0, 0.2);
+	font-size: 20px;
+	line-height: 1.4;
+}
+
+.page-header div {
+	margin-top: 15px;
+}
+
+.page-body {
+	line-height: 1.4;
+	font-size: 16px;
+}
+
+.page-body p {
+	margin-bottom: 40px;
+}
+
+.page-body h2 {
+	margin-bottom: 5px;
+
+	color: #eee;
+
+	font-family: 'Lato', sans-serif;
+	line-height: 0.9em;
+	letter-spacing: 0.02em;
+
+	font-weight: bold;
+}

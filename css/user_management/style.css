@@ -1,0 +1,108 @@
+body {
+    background-color: #2c343c;
+    color: antiquewhite;
+	overflow: hidden;
+}
+
+input {
+	outline: none;
+}
+
+#center {
+	margin-top:10px;
+	margin-left: 14px;
+	margin-right: 14px;
+
+	height: 810px;
+	width: auto;
+
+	overflow: hidden;
+}
+
+
+/* 中心的标题 */
+.center_title {
+	padding-left: 35%;
+	font-size: 24px;
+	float: left;
+	font-weight: bolder;
+}
+
+/* 中心的标题下的内容部分 */
+.center_div_body {
+	margin-top: 50px;
+}
+
+/* 中心的标题下的内容部分的按钮 */
+.center_div_body .btn_gruop {
+
+}
+
+/* 中心的form表单 */
+#center_div1 {
+	padding: 10px;
+    margin-bottom: 10px;
+	text-align: center;
+}
+
+#center_div2 {
+	padding: 10px;
+	text-align: center;
+}
+
+.table1 {
+	width: 100%;
+}
+
+.input_common {
+	width:360px;
+	height: 32px;
+	border: 1px solid #C4C6CF;
+	border-radius: 3px;
+}
+
+/* 校验提示 */
+.tip_common {
+	margin-left: 50%;
+	font-size: 12px;
+	color: #ff6158;
+	display: none;
+	float: left;
+}
+
+.col-sm-2 {
+	text-align: right;
+}
+
+.col-sm-2 h5 {
+	font-size: 18px;
+	text-align: right;
+}
+
+/* 保存按钮 */
+.save {
+	width:60px;
+	height:35px;
+	background: #3D7CFF;
+
+	font-size: 14px;
+	color: #FFFFFF;
+	
+	border: none;
+	border-radius: 3px;
+}
+
+/* 取消按钮 */
+.cancel {
+	width:60px;
+	height:35px;
+	margin-right: -540px;
+	margin-left: 10px;
+	background: #FFFFFF;
+
+	font-size: 14px;
+
+	border: 1px solid #C4C6CF;
+	border-radius: 3px;
+}
+

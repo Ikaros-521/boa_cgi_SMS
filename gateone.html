@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GateOne</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="js/jquery-2.2.3.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<link type="text/css" href="css/jquery-ui.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="js/bootstrap.min.js"></script>
+	<link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+	<link rel="icon" href="img/logo.png" type="image/gif">
+	
+	<link href="css/gateone/style.css" rel="stylesheet">
+</head>
+<body>
+	<div id="center">
+		<div id="center_div1">
+            <h1>GateOne</h1>
+            </br>
+			<h3>运行状态 <span class="label" id="state">--</span></h3>
+            <button id="start_btn" type="button" class="btn btn-primary" onclick="set_gateone('start');">启动GateOne</button>
+            <button id="stop_btn" type="button" class="btn btn-primary" onclick="set_gateone('stop');">关闭GateOne</button>
+            <button id="restart_btn" type="button" class="btn btn-primary" onclick="set_gateone('restart');">重启GateOne</button>
+            </br>
+            <button id="enable_btn" type="button" class="btn btn-primary" onclick="set_gateone('enable');">设置开机启动</button>
+            <button id="disable_btn" type="button" class="btn btn-primary" onclick="set_gateone('disable');">关闭开机启动</button>
+			</br>
+			<span><a href="https://ikaros-521.gitee.io/blog/2020/04/09/centos7-da-jian-gateone-shi-xian-webssh/#toc-heading-8">环境搭建教程</a></span>
+			<span><a id="a_gateone">传送门</a></span>
+		</div>
+	</div>
+</body>
+<script src="js/gateone.js"></script>
+</html>
