@@ -13,6 +13,17 @@
 
 ## 工程下载
 [码云](https://gitee.com/ikaros-521/boa_cgi_SMS) [github](https://github.com/Ikaros-521/boa_cgi_SMS)
+## 目录说明
+**cgi-bin** 存放 `.c .h`和编译好的 `.cgi`文件  
+**cloud**  云端资源功能，存储云文件的文件夹  
+**css** 存放 `.css`文件  
+**file** 存放 用户账号信息文件，数据库文件等  
+**img** 存放图片素材  
+**js** 存放 `.js`文件  
+**log** 存放系统生成的 日志信息  
+**session** 存放用户登录生成的session_id  
+**html**文件置于根目录  
+![在这里插入图片描述](https://img-blog.csdnimg.cn/46c76079eec54565a5bab17365484e10.png)
 ## 功能说明
 应用资源管理系统 当时设计的主要功能对云服务器的应用资源（mysql、apache、gateone等）进行管理（开/关/重启）；还能上传下载文件，当个简易云盘；当然基本的系统状态查看得有；然后就是基础的登录登出；日志管理；用户管理的功能。  
 **默认用户名：admin 默认密码：123456**
